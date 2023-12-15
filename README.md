@@ -12,13 +12,16 @@ update
 # How to run
 
 
-1. Install Node.js [Download](https://nodejs.org/en/download).
+1. Install Node.js [Download from here](https://nodejs.org/en/download)
 
 2. creating node project
+```
 npm init
-
+```
 3. Installing packages
+```
 npm install express body-parser nodemon
+```
 
 4. setting up nodemon
 add this to the scripts in package.json   "start": "nodemon -e '*'"
