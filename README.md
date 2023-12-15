@@ -12,7 +12,7 @@ update
 # How to run
 
 
-1. Install Node.js
+1. Install Node.js [Download](https://nodejs.org/en/download).
 
 2. creating node project
 npm init
