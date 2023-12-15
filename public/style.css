@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(35, 7, 251);
+}
+#title {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    height: 40px;
+}
+
+
+#header {
+    background-color: rgb(20, 20, 16);
+    text-align: center;
+    margin-top: 10px;
+    height: 30px;
+    padding-top: 10px;
+
+}
+
+
+.heading {
+    margin-right: 30px;
+    color: white;
+}
+
+
+.body{
+    color: white;
+}
