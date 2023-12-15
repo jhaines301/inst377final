@@ -27,6 +27,11 @@ npm install express body-parser nodemon
 add this to the scripts in package.json   "start": "nodemon -e '*'"
 
 5. Running application
+```
 npm start
+```
 
-open the localhost:4000 or localhost:4000/index.html for homepage
+open the following url for homepage
+```
+localhost:4000/index.html
+```
