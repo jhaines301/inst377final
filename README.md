@@ -20,8 +20,8 @@ time, daily outlook into the state of Covid-19 in the country.
 
 For this project, our target devices would be Desktops and mobile. It is done in a way that it will be usable on different browsers such as Chrome, Firefox,...ect
 
-# Link to User Manual
-# Link to Developer Manual [link](https://github.com/jhaines301/inst377final/edit/main/README.md#how-to-run)
+# Link to User Manual [link](https://github.com/jhaines301/inst377final/blob/main/README.md#user-manual)
+# Link to Developer Manual [link](https://github.com/jhaines301/inst377final/edit/main/README.md#developer-manual)
 
 
 # User Manual
