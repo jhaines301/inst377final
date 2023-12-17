@@ -8,6 +8,9 @@ Leoul - getting charts to show data
 
 update
 
+# Project description:
+
+
 
 # How to run
 
