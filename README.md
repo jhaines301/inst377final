@@ -6,8 +6,6 @@ Jack - backend; 2 api end points, connect with supabase (?), write fetch/post re
 
 Leoul - getting charts to show data
 
-update
-
 # Project Title: COVID-19 in India
 
 ## Description of your project
@@ -26,31 +24,38 @@ For this project, our target devices would be Desktops and mobile. It is done in
 # Link to Developer Manual [link](https://github.com/jhaines301/inst377final/edit/main/README.md#how-to-run)
 
 
+# User Manual
+## Home Page
+It shows the total number of daily cases, total deaths, total survals etc.
+## About Page
+
+## Help Page
 
 
-# How to run
+# Developer Manual
 
+## Installation
 
-1. Install Node.js [Download from here](https://nodejs.org/en/download)
+1. Install Node.js [Download from here!](https://nodejs.org/en/download)
+2. git installation [Download from here!](https://git-scm.com/downloads)
+3. Visual Studio code [Click here!](https://code.visualstudio.com/Download) or any other popular coding editor.
 
-2. creating node project
+## Node js modules installation
+1. Cloning project repository
 ```
-npm init
+git clone https://github.com/jhaines301/inst377final.git
 ```
-3. Installing packages
+2. Installing node packages
 ```
 npm install express body-parser nodemon
 ```
-
-4. setting up nodemon
-add this to the scripts in package.json   "start": "nodemon -e '*'"
-
-5. Running application
+## Running the app
 ```
 npm start
 ```
-
-open the following url for homepage
+Open the following url in your browser
 ```
 localhost:4000/index.html
 ```
+
+
