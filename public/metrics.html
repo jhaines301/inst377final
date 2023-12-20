@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            table, th, td  {
+                border: 1px solid black;
+                padding: 5px;
+                margin-top: 10px;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="title">
+            <h1> Covid-19 Cases in India </h1>
+        </div>
+        <div id="header"> 
+            <a href="index.html" class="heading"> Home</a>
+            <a href="about.html"class= "heading"> About </a>
+            <a href="help.html" class="heading">API Metrics</a>
+            <a href="docs.html" class="heading"> Developer Manual </a>
+
+        </div>
+
+        
+
+        <div class="body">
+            <h2>Metrics</h2>
+            <p>State Selection Data Provided via API End-Points Hosted on Supabase</p>
+
+            <!-- Supabase chart-->
+            <table id="supabaseTable"
+            <thead>
+                <tr>
+                    <th>Date Selected</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- loads dynamically-->
+            </tbody>
+            </table>
+
+            <script>
+                async function fetchSupabaseData() {
+                    const response = await fetch('/metrics')
+                    const data = await response.json();
+                    return data;
+                }
+                async function populateTable() {
+                    const supabaseData = await fetchSupabaseData();
+                    const tableBody = document.querySelector('#supabaseTable')
+
+                    supabaseData.forEach(entry =>{
+                        const row = document.createElement('tr')
+                        const timestampCell = document.createElement('td')
+                        timestampCell.textContent = entry.date;
+                        row.appendChild(timestampCell)
+
+                        const stateCell = document.createElement('td')
+                        stateCell.textContent = entry.state;
+                        row.appendChild(stateCell);
+
+                        tableBody.appendChild(row)
+                    })
+                }
+
+                populateTable()
+
+                
+            </script>
+
+
+        </div>
+
+    </body>
+</html>

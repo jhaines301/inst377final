@@ -16,9 +16,9 @@
         </div>
         <div id="header"> 
             <a href="index.html" class="heading"> Home</a>
-            <a href="about.html"class= "heading"> About </a>
-            <a href="help.html" class="heading"> Help </a>
-            <a href="docs.html" class="heading"> Developer Manual </a>
+            <a href="about.html"class= "heading"> About</a>
+            <a href="metrics.html" class="heading">API Metrics</a>
+            <a href="docs.html" class="heading"> Developer Manual</a>
 
         </div>
 
@@ -67,6 +67,25 @@
             let selectedDate = '';
             let myChart;
 
+
+        async function storeMetrics(state, date) {
+            try {
+            const response = await fetch('/metrics', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ state }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error (server is either down or supabase project depreciated): ${response.status}`);
+            }
+            console.log(`Metrics stored for state: ${state}`);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
 
             async function fetchStateData() {
                 try {
@@ -136,6 +155,9 @@
                 if (!selectedStates.includes(selectedState)) {
                     selectedStates.push(selectedState);
                     console.log('Selected States:', selectedStates);
+
+                    //store metrics func
+                    storeMetrics(selectedState, selectedDate)
                 } else {
                     alert('State already selected.');
                 }
