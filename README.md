@@ -1,4 +1,5 @@
 # Project Title: COVID-19 in India
+Project By: John Haines, Leoul Gashaw, Madina Diane
 
 ## Description of Project
 
