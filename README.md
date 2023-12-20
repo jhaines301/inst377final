@@ -18,15 +18,11 @@ Leoul - getting charts to show data
 
 # Project Title: COVID-19 in India
 
-## Description of your project
+## Description of project
 
-Our proposed system aims to dynamically display data as it is updated via the API in a
-way that is viewable to both the client and general public. This will present daily updates on
-Covid-19 cases in India on a state-by-state basis. We have chosen to work with the Covid-19 India API as it provides daily data on testing
-numbers, confirmed cases, and recoveries for each state in the country. This can help provide real
-time, daily outlook into the state of Covid-19 in the country.
+our proposed system aims to display statistics related to COVID-19 in India in a way that is presentable and easy to acjnowledge, compare and learn from. This will be presented on a state by state basis and is viewable to both the client and general public. Our decision to work with COVID-19 cases in India API as it provides daily metrics throughout their research period of the number of tested, recovered, confirmed, deceased, and vaccinated individuals for each state in the country. This can help provide a daily outlook into the state of Covid-19 in the country.
 
-## Description of target browsers (iOS? Android? Which ones?)
+## Description of target browsers
 
 For this project, our target devices would be Desktops and mobile. It is done in a way that it will be usable on different browsers such as Chrome, Firefox,...ect
 
@@ -39,13 +35,33 @@ For this project, our target devices would be Desktops and mobile. It is done in
 
 # User Manual
 ## Home Page
-It shows the total number of daily cases, total deaths, total survals etc.
+The home page prompts the user with a list of all states in India and their state code where they can choose multiple to then compare the selected state's cumulative total numbers from a selcted day in the range of conducting research. The result will be displayed as a group bar graph in which they are grouped by state with the metrics; Confirmed, Tested, Recovered, Deceased, and Vaccinated in which are quantified by the total reported people. 
 ## About Page
 
 ## Help Page
 
 
 # Developer Manual
+
+(GET)
+https://data.covid19india.org/v4/min/timeseries.min.json
+: This GET request retrieves the statistics of a given state based on a given date
+
+
+(GET)
+https://countriesnow.space/api/v0.1/countries/states
+: This GET request retrieves Country information and in this usage it was filtered to get the country data of India. The India data regarding states was then accessed and matched up the state codes to then find the correlating state code and full name.
+
+(Library)
+https://cdn.jsdelivr.net/npm/chart.js
+: This Library intakes the data and presents it in a bar graph that is simple to understand.
+
+(Library)
+https://cdn.jsdelivr.net/npm/flatpickr
+: This Library intakes the range of research and prompts a calander with dates that have data being allowed to be selected in regards to each state.
+
+
+The bugs that are known are the possible flawed dates within the data presented as some dates may be zeroed out despite the research being cumulative. Apart from that there hasn't been any other bugs discovered.
 
 ## Installation
 
