@@ -4,6 +4,16 @@
 
 Jack - backend; 2 api end points, connect with supabase (?), write fetch/post requests
 
+notes from OH meeting - 
+
+Track metrics (how many times is “state” searched) - save in supabase db (display somewhere)
+Supabase counts as authored api endpoints
+incorporate tracking when a certain state is searched somehow?
+
+incorporate multiple types of charts possible 
+isolate which
+
+
 Leoul - getting charts to show data
 
 # Project Title: COVID-19 in India
