@@ -70,8 +70,8 @@ npm install express body-parser nodemon
 ```
 node index.js
 ```
-```
-```
 localhost:4000/index.html
+```
+
 
 
